@@ -1,4 +1,4 @@
-# <Your-Project-Title>
+# Dad Gifs
 
 ## Description
 
@@ -13,7 +13,7 @@ The objective of this project is to....
 
 If your README is long, add a table of contents to make it easy for users to find what they need.
 
-- [](#)
+- [Dad Gifs](#dad-gifs)
   - [Description](#description)
   - [Table of Contents (Optional)](#table-of-contents-optional)
   - [Installation](#installation)
