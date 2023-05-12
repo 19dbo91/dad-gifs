@@ -58,6 +58,19 @@
 //Debug Printer
 function p(me){console.log(me);}
 
+fetch("https://icanhazdadjoke.com/", {
+  method: "GET",
+  headers: {
+    Accept: "application/json",
+  },
+})
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data);
+  });
+
 
 
 //!end
