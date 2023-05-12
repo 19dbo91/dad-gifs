@@ -1,0 +1,66 @@
+#header-title {
+    border: 3px solid black;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.jokes-setup {
+    display: flex;
+    flex-direction: column; /* sets the flex container to display its items vertically */
+    justify-content: center;
+    align-items: center;
+  }
+  
+.box-1 {
+    width: 20%;
+    margin: 0 auto;
+    border: 3px solid black;
+    text-align: center;
+    padding: 20px;
+  }
+
+  body {
+    background-color: aliceblue;
+}
+
+.box-2 {
+  width: 20%;
+  margin: 0 auto;
+  border: 3px solid black;
+  text-align: center;
+  padding: 20px;
+}
+
+.gif-setup {
+  display: flex;
+  flex-direction: column; /* sets the flex container to display its items vertically */
+  justify-content: center;
+  align-items: center;
+}
+
+
+.jokes-punchline {
+  display: flex;
+  flex-direction: column; /* sets the flex container to display its items vertically */
+  justify-content: center;
+  align-items: center;
+}
+
+
+.box-3 {
+  width: 20%;
+  margin: 0 auto;
+  border: 3px solid black;
+  text-align: center;
+  padding: 20px;
+}
+
+.random-button { 
+    display: flex;
+    flex-direction: column; /* sets the flex container to display its items vertically */
+    justify-content: center;
+    align-items: center;
+}
