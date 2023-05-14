@@ -1,11 +1,12 @@
 #header-title {
-    border: 3px solid black;
+    border: 3px solid white;
     padding: 2rem;
 }
 
 header {
     display: flex;
     justify-content: center;
+    margin: 65px;
 }
 
 .jokes-setup {
@@ -18,7 +19,7 @@ header {
 .box-1 {
     width: 20%;
     margin: 2rem auto;
-    border: 3px solid black;
+    border: 3px solid white;
     text-align: center;
     padding: 20px;
   }
@@ -30,7 +31,7 @@ header {
 .box-2 {
   width: 20%;
   margin: 2rem auto;
-  border: 3px solid black;
+  border: 3px solid white;
   text-align: center;
   padding: 20px;
 }

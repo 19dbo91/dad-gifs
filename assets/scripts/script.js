@@ -54,12 +54,14 @@
 // #endregion
 
 //!start
+
 var jokeButton = document.getElementById("jokeButton");
 var punchLine = document.getElementById("punchLine");
 //Debug Printer
 function p(me) {
   console.log(me);
 }
+
 function fetchJoke() {
   fetch("https://icanhazdadjoke.com/", {
     method: "GET",
@@ -72,7 +74,6 @@ function fetchJoke() {
     })
     .then(function (data) {
       punchLine.textContent = data.joke;
-      console.log(data)
     });
 }
 
