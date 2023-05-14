@@ -13,14 +13,16 @@ header {
     flex-direction: column; /* sets the flex container to display its items vertically */
     justify-content: center;
     align-items: center;
+    height: 2px;
   }
   
 .box-1 {
-    width: 20%;
+    width: 11%;
     margin: 2rem auto;
     border: 3px solid black;
     text-align: center;
     padding: 20px;
+    height: 1px;
   }
 
   body {
@@ -28,11 +30,12 @@ header {
 }
 
 .box-2 {
-  width: 20%;
+  width: 1%;
   margin: 2rem auto;
   border: 3px solid black;
   text-align: center;
-  padding: 20px;
+  padding: 81px;
+  height: 170px;
 }
 
 .gif-setup {
@@ -40,6 +43,7 @@ header {
   flex-direction: column; /* sets the flex container to display its items vertically */
   justify-content: center;
   align-items: center;
+  height: 132px;
 }
 
 
