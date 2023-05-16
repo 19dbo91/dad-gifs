@@ -56,12 +56,15 @@
 // #endregion
 
 //!start
+//API KEY
+let APIKEY = "vy9H3BI8p6HQJDfZnd3oGNh5PLiXajDe";
 
 //Variable Declaration
 const jokeButton = document.getElementById("jokeButton");
 const setUp = document.getElementById("setup");
 const punchLine = document.getElementById("punchLine");
 const regex = /[!\-\.?\,]/; //Needs more edge-case testing (Priority: Last; works 95%)
+const gifImage = document.getElementById("gif")
 
 //#region Joke Parsing
 let parsedJoke = {
@@ -82,8 +85,6 @@ function updateJoke(jokeString){
 }
 //#endregion
 
-
-
 function fetchJoke() {
   fetch("https://icanhazdadjoke.com/", {
     method: "GET",
@@ -98,11 +99,31 @@ function fetchJoke() {
       updateJoke(data.joke);
       setUp.textContent = parsedJoke.setup;
       punchLine.textContent = parsedJoke.punchline;
+      console.log(parsedJoke.punchline)
+      init(parsedJoke.punchline);
     });
 }
 
 jokeButton.addEventListener("click", fetchJoke);
 
-
+//Giphy API 
+function init(string) {
+    let url = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=5&q=`;
+    let str = string;
+    url = url.concat(str);
+    url = encodeURI(url)
+    fetch(url)
+      .then(response => response.json())
+      .then(content => {
+        //  data, pagination, meta
+        console.log(content.data);
+        console.log("META", content.meta);            
+        console.log(content.data[0].images.downsized.url)
+        gifImage.src = content.data[0].images.downsized.url;        
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  };
 
 //!end
