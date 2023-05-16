@@ -1,28 +1,21 @@
 // #region METACODE
-// Author: Dustin Bonilla
+// Contributors: Steven, Jonathan, Dustin
 // Project Name:
 
 /*      USER STORY
  *_______________________________________________________________________________
- * :: (perspective here)
- *
- *
- *
- *
- *_______________________________________________________________________________
- *      Example - Delete on fill
- *_______________________________________________________________________________
- * :: A coder
- * I WANT TO insert some predicate here the client will operate with/on
- * SO THAT I can align the project to
- *
+ * :: Dad Joke and Gif Enthusiast
+ * I WANT to view dad jokes paired with an appropriate gif to go with it
+ * SO THAT share them with everyone!
  */
 
 /*      ACCEPTANCE CRITERIA
  *_______________________________________________________________________________
- * .:
+ * .: A web app combine
  *
- *
+ * @ URL load
+ *  > Open to homepage with a randomized combo
+ * 
  *
  * _______________________________________________________________________________
  *      Template - Delete on fill
@@ -39,28 +32,57 @@
  *
  */
 
-/*      MOCK UP NOTES
- *_______________________________________________________________________________
- *
- *
- */
 
 /*      OTHER NOTES
- *      GENERAL FLOW OF SITES
  *_______________________________________________________________________________
- *
+ *  //TODO (2) Handling joke syntax:
+ *  
+ *  1) No punctuations/one-liners - doesn't move anything to punchline
+ *    S: I was thinking about moving to Moscow but there is no point Russian into things.
+ *    P:
+ * 
+ *  2) Abbreviation
+ *    ex) What’s E. (BREAK) T.
+ * 
+ *  3) Quoted structures
+ *    S: "Why do seagulls fly over the ocean?
+ *    p:" "Because if they flew over the bay, we'd call them bagels."
+ *  
+ *  4) Comma and Hyphen issues; varying uses collide parsing
+ *    s: Every morning when I go out,
+ *    p: I get hit by bicycle. Every morning! It's a vicious cycle.
  *
  */
 // #endregion
 
 //!start
 
-var jokeButton = document.getElementById("jokeButton");
-var punchLine = document.getElementById("punchLine");
-//Debug Printer
-function p(me) {
-  console.log(me);
+//Variable Declaration
+const jokeButton = document.getElementById("jokeButton");
+const setUp = document.getElementById("setup");
+const punchLine = document.getElementById("punchLine");
+const regex = /[!\-\.?\,]/; //Needs more edge-case testing (Priority: Last; works 95%)
+
+//#region Joke Parsing
+let parsedJoke = {
+    setup :"",
+    punchline :""
+}// refer to this object for setup and punchline
+
+function updateJoke(jokeString){
+  let matchedSymbol = jokeString.match(regex);
+  let indexedAt = jokeString.indexOf(matchedSymbol)
+  let start =jokeString.slice(0, indexedAt+1).trim();
+  let end =jokeString.slice(indexedAt+1).trim();
+
+  parsedJoke.setup = start;
+  parsedJoke.punchline = end;
+  console.log(`S: ${parsedJoke.setup}`)
+  console.log(`P: ${parsedJoke.punchline}`)
 }
+//#endregion
+
+
 
 function fetchJoke() {
   fetch("https://icanhazdadjoke.com/", {
@@ -73,9 +95,14 @@ function fetchJoke() {
       return response.json();
     })
     .then(function (data) {
-      punchLine.textContent = data.joke;
+      updateJoke(data.joke);
+      setUp.textContent = parsedJoke.setup;
+      punchLine.textContent = parsedJoke.punchline;
     });
 }
 
 jokeButton.addEventListener("click", fetchJoke);
+
+
+
 //!end
