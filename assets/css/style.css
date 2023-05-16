@@ -14,7 +14,7 @@ header {
     flex-direction: column; /* sets the flex container to display its items vertically */
     justify-content: center;
     align-items: center;
-    height: 2px;
+    height: 132px;
   }
   
 .box-1 {
@@ -23,7 +23,7 @@ header {
     border: 3px solid white;
     text-align: center;
     padding: 20px;
-    height: 1px;
+    
   }
 
   body {
@@ -36,7 +36,7 @@ header {
   border: 3px solid white;
   text-align: center;
   padding: 81px;
-  height: 170px;
+  
 }
 
 .gif-setup {
