@@ -1,5 +1,5 @@
 #header-title {
-  border: 3px solid white;
+  border: 3px solid rgb(37, 4, 78);
   padding: 2rem;
   font-size: 40px;
 }
@@ -21,7 +21,7 @@ header {
 .box-1 {
   width: fit-content;
   margin: 2rem auto;
-  border: 3px solid white;
+  border: 3px solid rgb(37, 4, 78);
   text-align: center;
   padding: 0px 50px;  
 }
@@ -31,38 +31,28 @@ body {
 }
 
 .box-2 {
-width: 800px;
-margin: 2rem auto;
-border: 3px solid white;
-text-align: center;  
+  width: 800px;
+  margin: 2rem auto;
+  border: 3px solid rgb(37, 4, 78);
+  text-align: center;
 }
 
 #gif {
-width: 100%;
-height: 350px;
+  width: 100%;
+  height: 350px;
 }
-
-.gif-setup {
-display: flex;
-flex-direction: column; /* sets the flex container to display its items vertically */
-justify-content: center;
-align-items: center;
-height: 132px;
-}
-
 
 .jokes-punchline {
-display: flex;
-flex-direction: column; /* sets the flex container to display its items vertically */
-justify-content: center;
-align-items: center;
+  display: flex;
+  flex-direction: column; /* sets the flex container to display its items vertically */
+  justify-content: center;
+  align-items: center;
 }
 
-
 .box-3 {
-width: 20%;
-margin: 2rem auto;
-text-align: center;
+  width: 20%;
+  margin: 2rem auto;
+  text-align: center;
 }
 
 .random-button { 
@@ -72,14 +62,17 @@ text-align: center;
   align-items: center;
   padding-bottom: 50px;
 }
+
 #setup {
-font-size: 25px;
-font-family: 'Nunito Sans', sans-serif;
-font-weight: bold;
+  font-size: 30px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: bold;
+  color: white;
 }
 
 #punchLine {
-font-size: 30px;
-font-family: 'Nunito Sans', sans-serif;
-font-weight: bold;
+  font-size: 30px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: bold;
+  color: white;
 }
