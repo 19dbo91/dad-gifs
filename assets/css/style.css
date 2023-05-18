@@ -6,7 +6,7 @@
 header {
     display: flex;
     justify-content: center;
-    margin: 65px;
+    margin: 30px;
 }
 
 .jokes-setup {
@@ -18,7 +18,7 @@ header {
   }
   
 .box-1 {
-    width: 11%;
+    width: fit-content;
     margin: 2rem auto;
     border: 3px solid white;
     text-align: center;
@@ -39,7 +39,7 @@ header {
 #gif {
   width: 100%;
   object-fit: cover;
-  height: auto;
+  height: 350px;
 }
 
 .gif-setup {
@@ -62,7 +62,6 @@ header {
 .box-3 {
   width: 20%;
   margin: 2rem auto;
-  border: 3px solid black;
   text-align: center;
   padding: 20px;
 }
@@ -72,4 +71,5 @@ header {
     flex-direction: column; /* sets the flex container to display its items vertically */
     justify-content: center;
     align-items: center;
+    padding-bottom: 50px;
 }
