@@ -1,37 +1,6 @@
 // #region METACODE
-// Contributors: Steven, Jonathan, Dustin
-// Project Name:
-
-/*      USER STORY
- *_______________________________________________________________________________
- * :: Dad Joke and Gif Enthusiast
- * I WANT to view dad jokes paired with an appropriate gif to go with it
- * SO THAT share them with everyone!
- */
-
-/*      ACCEPTANCE CRITERIA
- *_______________________________________________________________________________
- * .: A web app combine
- *
- * @ URL load
- *  > Open to homepage with a randomized combo
- * 
- *
- * _______________________________________________________________________________
- *      Template - Delete on fill
- * _______________________________________________________________________________
- * .: (Given here)
- *
- * @ means when
- *  > means then
- *
- * //// marks off completed
- *
- * @ adding to my acceptance criteria // TODO:(1)
- *  >
- *
- */
-
+// Contributors: Steven, Jonathan, Dustin, Daniel and Luke
+// Project Name: Dad Gifs
 
 /*      OTHER NOTES
  *_______________________________________________________________________________
@@ -56,7 +25,7 @@
 // #endregion
 
 //!start
-//API KEY
+// Giphy API KEY
 let APIKEY = "vy9H3BI8p6HQJDfZnd3oGNh5PLiXajDe";
 
 //Variable Declaration
@@ -64,6 +33,7 @@ const jokeButton = document.getElementById("jokeButton");
 const setUp = document.getElementById("setup");
 const punchLine = document.getElementById("punchLine");
 const regex = /[!\-\.?\,]/; //Needs more edge-case testing (Priority: Last; works 95%)
+// Giphy API
 const gifImage = document.getElementById("gif")
 
 //#region Joke Parsing
